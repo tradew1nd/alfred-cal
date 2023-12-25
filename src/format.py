@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # encoding: utf-8
 
-import tkFont
+import tkinter.font as tkFont
 import plistlib
-import Tkinter as tk
+import tkinter as tk
 
 plist = "/preferences/appearance/prefs.plist"
 theme = "theme.plist"
@@ -42,7 +42,7 @@ class Format(object):
                 number_of_spaces = (pos[i] - self.font.measure(str)) / space_width
                 if (pos[i] - self.font.measure(str)) % space_width > space_width / 2:
                     number_of_spaces += 1
-                str += u' ' * number_of_spaces
+                str += u' ' * int(number_of_spaces)
                 str += day
             str_list.append(str)
         return str_list
@@ -54,4 +54,4 @@ if __name__ == "__main__":
     f = Format(key, path)
     from cal import Cal
     c = Cal({}, key, path)
-    print f.format(c.get_cal(c.get_weeks(2015, 1)), c.week_text(6))
+    print(f.format(c.get_cal(c.get_weeks(2015, 1)), c.week_text(6)))

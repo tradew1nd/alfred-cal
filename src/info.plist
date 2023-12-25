@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>5DC00336-DCA8-49F2-9D02-57CF703B1D20</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -42,6 +46,14 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -56,18 +68,26 @@
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
-				<string>#!/usr/bin/python
+				<string>#!/usr/bin/python3
 
 from main import Main
 
 if __name__=="__main__":
     main = Main("{query}")
     main.execute()</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Calendar</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -76,7 +96,7 @@ if __name__=="__main__":
 			<key>uid</key>
 			<string>3C835BC3-638B-4577-AEDC-E23EEEA4A032</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -86,26 +106,38 @@ if __name__=="__main__":
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>#!/usr/bin/python
+				<string>#!/usr/bin/python3
 # encoding: utf-8
 
 from open import open_cal
 
 if __name__=="__main__":
     open_cal("{query}")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>F5EF1D79-CCA3-422D-AF82-D09026D77FA1</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -120,18 +152,26 @@ if __name__=="__main__":
 				<integer>0</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
-				<string>#!/usr/bin/python
+				<string>#!/usr/bin/python3
 
 from config import Config
 
 if __name__=="__main__":
     config = Config("{query}")
     config.execute()</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
 				<key>title</key>
 				<string>Calendar config</string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -140,7 +180,7 @@ if __name__=="__main__":
 			<key>uid</key>
 			<string>5DC00336-DCA8-49F2-9D02-57CF703B1D20</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -150,7 +190,7 @@ if __name__=="__main__":
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>#!/usr/bin/python
+				<string>#!/usr/bin/python3
 # encoding: utf-8
 
 from config import Config
@@ -158,15 +198,19 @@ from config import Config
 if __name__=="__main__":
     config = Config("{query}")
     config.set_value()</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>9</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>89F7E48F-1E64-4A0B-A463-CE1488BD106F</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -175,25 +219,35 @@ if __name__=="__main__":
 	<dict>
 		<key>3C835BC3-638B-4577-AEDC-E23EEEA4A032</key>
 		<dict>
+			<key>xpos</key>
+			<real>300</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 		<key>5DC00336-DCA8-49F2-9D02-57CF703B1D20</key>
 		<dict>
+			<key>xpos</key>
+			<real>300</real>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>89F7E48F-1E64-4A0B-A463-CE1488BD106F</key>
 		<dict>
+			<key>xpos</key>
+			<real>500</real>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>F5EF1D79-CCA3-422D-AF82-D09026D77FA1</key>
 		<dict>
+			<key>xpos</key>
+			<real>500</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>

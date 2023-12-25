@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # encoding: utf-8
 
 from util import DEFAULT_SETTINGS
@@ -8,7 +8,7 @@ import sys
 
 class Base(object):
     def __init__(self, args):
-        self.args = unicode(args.strip(), 'utf-8')
+        self.args = args.strip()
 
     def execute(self):
         wf = Workflow(default_settings=DEFAULT_SETTINGS)

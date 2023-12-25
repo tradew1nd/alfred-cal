@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # encoding: utf-8
 
 from cal import Cal
@@ -46,7 +46,7 @@ class Main(Base):
                 self.wf.add_item(text, icon="image/blank.png")
             else:
                 arg = "%d %d %s" % (year, month, text.strip().split()[0])
-                self.wf.add_item(text, icon="image/biank.png", arg=arg, valid=True)
+                self.wf.add_item(text, icon="image/blank.png", arg=arg, valid=True)
         self.wf.send_feedback()
 
     def handle_arg(self):
@@ -123,7 +123,7 @@ class Main(Base):
     def change_month(self, year, month, delta):
         month += delta
         ret_month = month % 12
-        ret_year = year + month / 12
+        ret_year = year + month // 12
         if ret_month == 0:
             ret_month = 12
         if month % 12 == 0:

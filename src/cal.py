@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # encoding: utf-8
 
 import calendar
@@ -7,7 +7,7 @@ from format import Format
 
 
 class Cal(object):
-    
+
     def __init__(self, settings, key, path):
         self.weekdays_name = settings["weekdays"].split()
         self.month_name = settings["month"].split()
@@ -16,7 +16,7 @@ class Cal(object):
 
         self.key = key
         self.path = path
-    
+
     def get_weeks(self, year, month, first_weekday):
         cal = calendar.Calendar(first_weekday)
         return list(cal.itermonthdates(year, month))
@@ -31,15 +31,15 @@ class Cal(object):
 
     def month_text(self, year, month):
         return self.month_name[month - 1] + "  " + str(year)
-    
+
     def week_text(self, first_weekday):
         return ''.join([weekday.center(self.width) for weekday in self.new_weekdays_name(first_weekday)])
-            
+
     def new_weekdays_name(self, first_weekday):
         return self.weekdays_name[first_weekday:] + self.weekdays_name[:first_weekday]
 
     def get_cal(self, days):
-        current_month = days[len(days) / 2].month
+        current_month = days[len(days) // 2].month
         weeks = []
         week = []
         for day in days:
@@ -54,9 +54,9 @@ class Cal(object):
 
     def str_day(self, day):
         if day == date.today() and self.highlight_today:
-            return unichr(0x2605)
+            return chr(0x2605)
         else:
-            return unicode(day.day).zfill(2)
+            return str(day.day).zfill(2)
 
     def center(self, texts):
         texts[0] = texts[0].center(len(texts[1]))
@@ -71,4 +71,4 @@ if __name__ == "__main__":
     path = "/Users/owen/Library/Application Support/Alfred 2/Alfred.alfredpreferences"
     c = Cal({}, key, path)
     for line in c.get_weeks_text(2014, 11, 6):
-        print line
+        print(line)
